@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 # Create your models here.
 
 
@@ -40,4 +41,8 @@ class Post(models.Model):
 	#在shell环境下返回标题
 	def __str__(self):
 		return self.title
+
+	def get_absolute_url(self):
+		return reverse('blog:detail',kwargs={'post_id':self.pk})#用于返回文章编码，导入了reverse函数
+
 
