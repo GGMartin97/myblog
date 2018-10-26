@@ -38,3 +38,5 @@ def category(request, pk):#获得分类分类
 	post_list = Post.objects.filter(category=cate).order_by('-created_time')
 	return render(request, 'blog/index.html',context={'post_list':post_list})
 
+def maintenance(request):
+	return render(request,'blog/maintenance.html')
