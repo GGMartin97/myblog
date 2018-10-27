@@ -10,6 +10,9 @@ def index(request):
 	post_list=Post.objects.all().order_by('-created_time')
 	return render(request,'blog/index.html',{'post_list':post_list})
  	#render通过传入参数构造httpresponse
+def bloglist(request):
+	post_list=Post.objects.all().order_by('-created_time')
+	return render(request,'blog/full-width.html',{'post_list':post_list})
 
 def detail(request,post_id):
 	post = get_object_or_404(Post,pk=post_id)
@@ -40,3 +43,9 @@ def category(request, pk):#获得分类分类
 
 def maintenance(request):
 	return render(request,'blog/maintenance.html')
+
+def about(request):
+	return render(request,'blog/about.html')
+
+def contact(request):
+	return render(request,'blog/contact.html')
