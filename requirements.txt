@@ -11,7 +11,7 @@ distro-info==0.18
 -e git+https://github.com/django/django.git@328f5627ddfca3008dc5cf9f7da1ade0157ac74f#egg=Django
 django-simditor==0.0.15
 docopt==0.6.2
-httplib2==0.9.2
+httplib2==0.19.0
 idna==2.6
 keyring==10.6.0
 keyrings.alt==3.0
